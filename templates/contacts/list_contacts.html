@@ -9,6 +9,12 @@
   {% for contact in contacts %}
   <div class="w-33 pa3">
     <h2>{{ contact.name }}</h2>
+    {% if contact.birthday %}
+    <div class="flex">
+      <div class="pr2"><i class="icofont-birthday-cake"></i></div>
+      <div>{{ contact.birthday }}</div>
+    </div>
+    {% endif %}
 
     <div class="flex">
       <div class="pr2"><i class="icofont-location-pin"></i></div>
@@ -28,6 +34,7 @@
     </div>
     {% endif %}
 
+    
     {% if contact.email %}
     <div class="flex">
       <div class="pr2"><i class="icofont-ui-email"></i></div>
